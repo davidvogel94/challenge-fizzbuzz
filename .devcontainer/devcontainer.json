@@ -1,0 +1,57 @@
+{
+    "name": "C# (.NET), PostgreSQL, Node",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": true,
+            "configureZshAsDefaultShell": true,
+            "installOhMyZsh": true,
+            "installOhMyZshConfig": true,
+            "upgradePackages": true,
+            "nonFreePackages": true,
+            "username": "automatic",
+            "userUid": "automatic",
+            "userGid": "automatic"
+        },
+        "ghcr.io/larsnieuwenhuizen/features/neovim:0": {},
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+            "moby": true,
+            "installDockerBuildx": true,
+            "version": "latest",
+            "dockerDashComposeVersion": "v2"
+        },
+        "ghcr.io/devcontainers/features/node:1": {
+            "nodeGypDependencies": true,
+            "installYarnUsingApt": true,
+            "version": "latest",
+            "nvmVersion": "latest"
+        },
+        "ghcr.io/akhildevelops/devcontainer-features/apt:0": {
+            
+        }
+	},
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+    "forwardPorts": [
+        5000,
+        5001,
+        27017
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "mongodb.mongodb-vscode"
+            ]
+        }
+    },
+	// "portsAttributes": {
+	//		"5001": {
+	//			"protocol": "https"
+	//		}
+	// }
+}
