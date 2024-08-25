@@ -11,11 +11,10 @@
             "installOhMyZshConfig": true,
             "upgradePackages": true,
             "nonFreePackages": true,
-            "username": "automatic",
-            "userUid": "automatic",
-            "userGid": "automatic"
+            "username": "vscode",
+            "userUid": "1000",
+            "userGid": "1000"
         },
-        "ghcr.io/larsnieuwenhuizen/features/neovim:0": {},
         "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
             "moby": true,
             "installDockerBuildx": true,
@@ -27,9 +26,6 @@
             "installYarnUsingApt": true,
             "version": "latest",
             "nvmVersion": "latest"
-        },
-        "ghcr.io/akhildevelops/devcontainer-features/apt:0": {
-            
         }
 	},
 
@@ -45,13 +41,12 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "mongodb.mongodb-vscode"
+                "mongodb.mongodb-vscode",
+                "ms-dotnettools.csdevkit",
+                "patcx.vscode-nuget-gallery",
+                "VASubasRaj.flashpost",
+                "Gruntfuggly.todo-tree"
             ]
         }
-    },
-	// "portsAttributes": {
-	//		"5001": {
-	//			"protocol": "https"
-	//		}
-	// }
+    }
 }
